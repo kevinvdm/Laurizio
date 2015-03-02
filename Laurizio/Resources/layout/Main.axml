@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:weightSum="4">
+    <CalendarView
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/calendarView1"
+        android:background="#ff84e0e8"
+        android:layout_weight="1" />
+    <TextView
+        android:text="Notes"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/textView1"
+        android:layout_marginTop="0.0dp"
+        android:inputType="text"
+        android:background="#ffe7df53"
+        android:layout_weight="1" />
+    <TextView
+        android:text="Chat"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/textView2"
+        android:background="#ff84e0e8"
+        android:scrollbars="vertical"
+        android:verticalScrollbarPosition="right"
+        android:layout_weight="1" />
+    <TextView
+        android:text="Notifications"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/textView3"
+        android:layout_weight="1" />
+</LinearLayout>
