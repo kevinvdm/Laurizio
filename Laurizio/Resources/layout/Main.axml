@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:weightSum="4">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="4"
+    android:id="@+id/linearLayout1">
     <CalendarView
         android:layout_width="match_parent"
         android:layout_height="fill_parent"
         android:id="@+id/calendarView1"
         android:background="#ff84e0e8"
         android:layout_weight="1" />
-    <TextView
+<!--    //TO DELETE:
+        <TextView
         android:text="Notes"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:layout_width="match_parent"
@@ -19,7 +21,23 @@
         android:layout_marginTop="0.0dp"
         android:inputType="text"
         android:background="#ffe7df53"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:autoText="false"
+        android:visibility="visible"
+        android:scrollHorizontally="true"
+        android:clickable="true"
+        android:enabled="true"
+        android:editable="true"
+        android:textIsSelectable="true" />-->
+    <EditText
+        android:text="Notes"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:inputType="textMultiLine"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffe7df53"
+        android:layout_weight="1"
+        android:id="@+id/editText1" />
     <TextView
         android:text="Chat"
         android:textAppearance="?android:attr/textAppearanceSmall"
