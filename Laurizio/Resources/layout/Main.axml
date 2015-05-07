@@ -1,58 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:weightSum="4"
     android:id="@+id/linearLayout1">
-    <CalendarView
+    <FrameLayout
+        android:id="@+id/frameContent"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/calendarView1"
-        android:background="#ff84e0e8"
-        android:layout_weight="1" />
-<!--    //TO DELETE:
-        <TextView
-        android:text="Notes"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/textView1"
-        android:layout_marginTop="0.0dp"
-        android:inputType="text"
-        android:background="#ffe7df53"
-        android:layout_weight="1"
-        android:autoText="false"
-        android:visibility="visible"
-        android:scrollHorizontally="true"
-        android:clickable="true"
-        android:enabled="true"
-        android:editable="true"
-        android:textIsSelectable="true" />-->
-    <EditText
-        android:text="Notes"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:inputType="textMultiLine"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:background="#ffe7df53"
-        android:layout_weight="1"
-        android:id="@+id/editText1" />
-    <TextView
-        android:text="Chat"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/textView2"
-        android:background="#ff84e0e8"
-        android:scrollbars="vertical"
-        android:verticalScrollbarPosition="right"
-        android:layout_weight="1" />
-    <TextView
-        android:text="Notifications"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:layout_width="match_parent"
-        android:layout_height="fill_parent"
-        android:id="@+id/textView3"
-        android:layout_weight="1" />
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+            <CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/calendarView1"
+                android:background="#ff84e0e8"
+                android:layout_weight="1" />
+            <EditText
+                android:id="@+id/notes"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:inputType="textLongMessage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#ffe7df53"
+                android:layout_weight="1"
+                android:text="Notes" />
+            <EditText
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/textView2"
+                android:background="#ff84e0e8"
+                android:scrollbars="vertical"
+                android:verticalScrollbarPosition="right"
+                android:layout_weight="1"
+                android:inputType="textLongMessage"
+                tools:text="Chat" />
+            <TextView
+                android:text="Notifications"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:id="@+id/textView3"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </FrameLayout>
+    <Listview
+        android:id="@+id/leftListView"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:choiceMode="singleChoice"
+        android:divider="#D2D2D2"
+        android:dividerHeight="2dp"
+        android:background="#F2F2F2" />
 </LinearLayout>
